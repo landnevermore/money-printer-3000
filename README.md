@@ -1,33 +1,21 @@
-# 💰 Ultimate Money Printer 3000
+# 💰 MoneyOS – Ultimate Money Printer
 
-**Das ultimative System, um digitale Produkte vollautomatisch zu erzeugen und zu verkaufen.**
+**All-in-One System für digitale Produkte, Marketing, Faceless Shorts, Lead Magnets und Bundles.**
 
-Erstelle in Sekunden professionelle PDF-Produkte (Habit Tracker, Budget-Planer, Content-Kalender, Journal, Checklisten usw.), generiere fertige Verkaufstexte + Tags und packe alles in ready-to-upload Sales Packages für Gumroad, Etsy und Payhip.
-
-> Von der Idee bis zum verkaufsfertigen Produkt in unter 60 Sekunden.
+Alles lokal. Alles kostenlos. Kein Abo.
 
 ---
 
-## ⚡ Features (Ultimate Edition)
+## ✨ Was drin ist
 
-- **Mehrere Produkttypen** out of the box
-  - 30/90-Tage Habit Tracker
-  - Wochen- & Monatsplaner
-  - Budget / Finance Tracker
-  - Content-Kalender (Creator)
-  - Gratitude / Mental Health Journal
-  - Meal Planner + Einkaufsliste
-  - Allgemeine Checklisten
-- **Batch-Modus** → erzeuge 5–20 Varianten auf einmal (verschiedene Farben & Titel)
-- **Automatische Sales Packages**
-  - Fertige PDF
-  - Produkt-Titel
-  - Lange Beschreibung (Gumroad/Etsy-ready)
-  - Tags / Keywords
-  - Preis-Empfehlung
-- **Schöne, moderne Designs** mit mehreren Farbthemes
-- **CLI + Interaktiver Modus**
-- Extrem leicht erweiterbar
+| Modul | Funktion |
+|-------|----------|
+| **Digital Products** | Professionelle PDFs (Habit Tracker, Budget, Journal, Fitness, Business...) + fertige Sales Packages |
+| **Marketing** | Hooks, Captions, Hashtags, Email-Sequenzen, Pinterest-Texte |
+| **Shorts** | Faceless Shorts-Skripte (Hook + Body + CTA) für TikTok / Reels / YouTube |
+| **Lead Magnets** | Kostenlose Freebies + Opt-in Texte |
+| **Bundles** | Mehrere Produkte zu einem Pack zusammenfassen |
+| **Dashboard** | Schöne Streamlit-Oberfläche + Tutorial beim ersten Start |
 
 ---
 
@@ -41,87 +29,67 @@ pip install -r requirements.txt
 
 ---
 
-## 💻 Nutzung
+## 💻 Starten
 
-### Interaktiver Modus (einfachste Variante)
+### Dashboard (empfohlen)
 ```bash
-python money_printer.py
+streamlit run app.py
 ```
 
-### Direkte Generierung
+Beim ersten Start erscheint ein Tutorial.
+
+### Optional: CLI (Digital Products)
 ```bash
-# Ein einzelnes Produkt
-python money_printer.py --type habit --title "30-Tage Fokus Challenge" --color teal
-
-# Batch-Modus (5 Varianten)
-python money_printer.py --type habit --batch 5
-
-# Budget-Planer in Rose
-python money_printer.py --type budget --color rose --title "Mein Finanz-Planer 2026"
+python -c "from modules.digital_products import create_product; print(create_product('habit', color='teal'))"
 ```
-
-### Verfügbare Produkttypen
-| Typ          | Beschreibung                     |
-|--------------|----------------------------------|
-| `habit`      | Habit Tracker (30/90 Tage)       |
-| `weekly`     | Wochenplaner                     |
-| `budget`     | Budget- & Ausgaben-Tracker       |
-| `content`    | Content-Kalender für Creator     |
-| `journal`    | Gratitude / Reflexions-Journal   |
-| `meal`       | Meal Planner + Einkaufsliste     |
-| `checklist`  | Allgemeine Checklisten           |
-
-### Verfügbare Farben
-`navy` · `teal` · `purple` · `rose` · `forest` · `slate` · `coral` · `indigo`
 
 ---
 
-## 📦 Was du nach dem Generieren bekommst
+## 📁 Output
 
-Jedes Produkt landet in einem eigenen Ordner unter `output/`:
+Alles landet im Ordner `output/`:
 
 ```
 output/
-├── 30-Tage_Fokus_Challenge_teal/
-│   ├── product.pdf              ← das fertige Produkt
-│   ├── title.txt                ← fertiger Produkttitel
-│   ├── description.txt          ← lange Verkaufsbeschreibung
-│   ├── tags.txt                 ← Keywords für Etsy/Gumroad
-│   └── pricing.txt              ← Preisempfehlung + Tipps
+├── 30-Tage_Habit_Tracker_teal/
+│   ├── product.pdf
+│   ├── title.txt
+│   ├── description.txt
+│   ├── tags.txt
+│   └── pricing.txt
+├── marketing_30-Tage_Habit_Tracker/
+│   ├── hooks.txt
+│   ├── captions.txt
+│   ├── hashtags.txt
+│   ├── email_sequence.txt
+│   └── pinterest.txt
+├── shorts_digitale_Produkte/
+│   ├── script_1_educational.txt
+│   ├── caption_1.txt
+│   └── ...
+└── BUNDLE_Ultimate_Productivity_Pack/
+    └── ...
 ```
-
-Du kannst den kompletten Ordner-Inhalt quasi 1:1 bei Gumroad/Etsy hochladen.
 
 ---
 
-## 💸 So machst du richtig Geld damit (Ultimate Playbook)
+## 💸 So machst du Geld damit
 
-1. **Batch generieren**  
-   `python money_printer.py --type habit --batch 10`
+1. Digital Product erstellen
+2. Marketing-Paket dazu generieren
+3. 2–3 Shorts-Skripte schreiben, die das Produkt bewerben
+4. Bei Gumroad / Etsy hochladen (9–15 € Single, 24–39 € Bundle)
+5. Shorts posten → Traffic → Verkäufe
 
-2. **Beste Varianten aussuchen** und bei Gumroad / Etsy einstellen  
-   Empfohlener Preis: **9–14 €** (Single) oder **24–29 €** (Bundle)
-
-3. **Traffic-Quellen die funktionieren**
-   - TikTok / Reels: "Ich habe in 60 Sekunden ein digitales Produkt erstellt"
-   - Pinterest (sehr stark für Planner)
-   - Reddit (r/passive_income, r/Entrepreneur, r/Etsy)
-   - X / Threads
-   - Kleine bezahlte Ads (Meta / Pinterest) sobald du 3–5 Produkte hast
-
-4. **Skalieren**
-   - Mache 15–30 Varianten pro Kategorie
-   - Erstelle Bundles ("Complete Productivity Pack")
-   - Biete "Lifetime Updates" an
-   - Später: eigene kleine Storefront (Stan Store, Gumroad Collections, etc.)
-
-Viele Creator verdienen mit genau diesem Modell 1.000–5.000€+ pro Monat, sobald sie 20–40 Produkte live haben.
+Viele Creator verdienen mit genau diesem Modell 1.000–5.000 €+ pro Monat.
 
 ---
 
 ## 🔧 Erweitern
 
-Neue Produkttypen kannst du sehr einfach in `money_printer.py` unter `PRODUCT_TEMPLATES` hinzufügen.
+Neue Produkttypen → `modules/digital_products/generator.py`  
+Neue Marketing-Vorlagen → `modules/marketing/generator.py`  
+Neue Shorts-Stile → `modules/shorts/generator.py`
 
 ---
 
@@ -131,5 +99,4 @@ MIT – mach damit was du willst (auch kommerziell).
 
 ---
 
-**Viel Erfolg beim Geld drucken.**  
-Wenn du die ersten 500€ damit verdient hast, lass es mich wissen.
+**Viel Erfolg beim Geld drucken.** 💰
