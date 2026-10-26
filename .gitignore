@@ -1,8 +1,10 @@
-output/
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
 .env
+.venv/
+venv/
+output/
+*.log
 .DS_Store
-*.pdf
-.idea/
-.vscode/
+.streamlit/secrets.toml

@@ -1,2 +1,6 @@
 fpdf2>=2.8.1
 pillow>=10.4.0
+streamlit>=1.39.0
+python-dotenv>=1.0.0
+edge-tts>=6.1.12
+requests>=2.32.0
